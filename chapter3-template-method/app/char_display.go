@@ -1,10 +1,11 @@
-package main
+package app
 
 import (
 	"fmt"
 )
 
-// CharDisplay - AbstractDisplayの抽象メソッドを全て実装するサブクラスの役割
+// CharDisplay - ConcreteClass(具象クラスの役割)
+// AbstractDisplayの抽象メソッドを全て実装する
 type CharDisplay struct {
 	*AbstractDisplay
 	ch byte

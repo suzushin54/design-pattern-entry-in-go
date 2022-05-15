@@ -1,4 +1,4 @@
-package main
+package app
 
 type Operation interface {
 	Open()
@@ -6,6 +6,7 @@ type Operation interface {
 	Close()
 }
 
+// AbstractDisplay - AbstractClass(抽象クラスの役割)
 type AbstractDisplay struct {
 	op Operation
 }
