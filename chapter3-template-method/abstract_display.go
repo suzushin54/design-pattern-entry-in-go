@@ -1,19 +1,20 @@
 package main
 
-type AbstractDisplay interface {
+type Operation interface {
 	Open()
 	Print()
 	Close()
 }
 
-type abstractDisplay struct {
-	AbstractDisplay
+type AbstractDisplay struct {
+	op Operation
 }
 
-func (a *abstractDisplay) Display() {
-	a.Open()
+// Display - AbstractDisplayが持つ3つのメソッドを使う、テンプレートメソッド
+func (a *AbstractDisplay) Display() {
+	a.op.Open()
 	for i := 0; i < 5; i++ {
-		a.Print()
+		a.op.Print()
 	}
-	a.Close()
+	a.op.Close()
 }
